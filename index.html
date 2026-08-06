@@ -21,9 +21,9 @@
 :root{
   --bg:#0d0805; --bg2:#150d07; --bg3:#1c1208;
   --cream:#f1e7d3; --cream2:#e9dcc3; --ink-on-cream:#2c1c0a;
-  --gold:#D4AF37; --gold-hi:#f4df9a; --gold-deep:#8a5c1a;
+  --gold:#d8a63c; --gold-hi:#f4df9a; --gold-deep:#8a5c1a;
   --indigo:#312e66; --indigo-deep:#171533;
-  --line:rgba(212,175,55,.26); --line-soft:rgba(212,175,55,.14);
+  --line:rgba(216,166,60,.26); --line-soft:rgba(216,166,60,.14);
   --dim:rgba(241,231,211,.62);
   --eo:cubic-bezier(.19,1,.22,1);
   --disp:'Italiana',serif; --serif:'Cormorant Garamond',serif; --body:'Outfit',sans-serif;
@@ -48,9 +48,10 @@ section{position:relative;padding:clamp(5.5rem,10vw,9rem) 0}
 .kick::after{content:"";width:44px;height:1px;background:linear-gradient(90deg,var(--gold),transparent)}
 .kick.one::after{display:none}
 .sec-title{font-family:var(--disp);font-weight:400;font-size:clamp(2.6rem,5.4vw,4.4rem);line-height:1.04;letter-spacing:.04em;margin-top:1.1rem}
-.rule{height:2px;width:130px;background:linear-gradient(90deg,var(--gold-deep),var(--gold-hi),var(--gold-deep));transform:scaleX(0);transform-origin:left;transition:transform 1.5s var(--eo) .3s;box-shadow:0 0 16px rgba(212,175,55,.55);margin-top:1.6rem}
+.rule{height:2px;width:130px;background:linear-gradient(90deg,var(--gold-deep),var(--gold-hi),var(--gold-deep));transform:scaleX(0);transform-origin:left;transition:transform 1.5s var(--eo) .3s;box-shadow:0 0 16px rgba(216,166,60,.55);margin-top:1.6rem}
+.rule.c{margin-left:auto;margin-right:0}
 .in .rule,.rule.in{transform:scaleX(1)}
-.gold-foil{background:linear-gradient(100deg,#7d5317 0%,#e9c465 24%,#fff3c4 42%,#D4AF37 60%,#9a6c22 82%,#f2d68a 100%);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:foil 7s ease-in-out infinite alternate}
+.gold-foil{background:linear-gradient(100deg,#7d5317 0%,#e9c465 24%,#fff3c4 42%,#d8a63c 60%,#9a6c22 82%,#f2d68a 100%);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:foil 7s ease-in-out infinite alternate}
 @keyframes foil{to{background-position:100% 0}}
 .rv{opacity:0;transform:translateY(48px);transition:opacity 1.1s var(--eo) var(--d,0s),transform 1.1s var(--eo) var(--d,0s)}
 .rv-l{transform:translateX(-60px)}.rv-r{transform:translateX(60px)}.rv-s{transform:scale(.9)}
@@ -68,10 +69,10 @@ section{position:relative;padding:clamp(5.5rem,10vw,9rem) 0}
 .kb img{animation:kb 22s ease-in-out infinite alternate}
 @keyframes kb{to{transform:scale(1.09) translateY(-1.6%)}}
 .btn{position:relative;display:inline-flex;align-items:center;gap:.7rem;padding:1.05rem 2.5rem;font-size:.76rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;overflow:hidden;border:1px solid transparent;transition:all .45s var(--eo)}
-.btn-gold{background:linear-gradient(120deg,#a97a20,#e9c465 45%,#D4AF37 70%,#b98a26);color:#221503;box-shadow:0 8px 26px -10px rgba(212,175,55,.6)}
-.btn-gold:hover{transform:translateY(-3px);box-shadow:0 16px 42px -10px rgba(212,175,55,.7),0 0 28px rgba(233,196,101,.35)}
+.btn-gold{background:linear-gradient(120deg,#a97a20,#e9c465 45%,#d8a63c 70%,#b98a26);color:#221503;box-shadow:0 8px 26px -10px rgba(216,166,60,.6)}
+.btn-gold:hover{transform:translateY(-3px);box-shadow:0 16px 42px -10px rgba(233,196,101,.7),0 0 28px rgba(233,196,101,.35)}
 .btn-ghost{border-color:rgba(240,217,140,.45);color:var(--gold-hi)}
-.btn-ghost:hover{background:rgba(212,175,55,.12);border-color:var(--gold);box-shadow:0 0 26px rgba(212,175,55,.28)}
+.btn-ghost:hover{background:rgba(216,166,60,.12);border-color:var(--gold);box-shadow:0 0 26px rgba(216,166,60,.28)}
 .btn::before{content:"";position:absolute;top:0;left:-80%;width:50%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.8),transparent);transform:skewX(-22deg);transition:left .7s ease}
 .btn:hover::before{left:130%}
 .sheen::before{animation:sheen 4.6s ease 2.4s infinite}
@@ -84,9 +85,9 @@ section{position:relative;padding:clamp(5.5rem,10vw,9rem) 0}
 /* ================= CURSOR ================= */
 #curDot,#curRing{position:fixed;top:0;left:0;pointer-events:none;z-index:2100;border-radius:50%;opacity:0}
 #curDot{width:6px;height:6px;background:var(--gold-hi);box-shadow:0 0 10px rgba(244,223,154,.9)}
-#curRing{width:38px;height:38px;border:1px solid rgba(212,175,55,.65);transition:width .3s,height .3s,background .3s}
+#curRing{width:38px;height:38px;border:1px solid rgba(216,166,60,.65);transition:width .3s,height .3s,background .3s}
 body.has-cursor #curDot,body.has-cursor #curRing{opacity:1}
-#curRing.big{width:64px;height:64px;background:rgba(212,175,55,.12)}
+#curRing.big{width:64px;height:64px;background:rgba(216,166,60,.12)}
 
 /* ================= PRELOADER ================= */
 #preloader{position:fixed;inset:0;z-index:2000;pointer-events:none}
@@ -104,7 +105,7 @@ body.has-cursor #curDot,body.has-cursor #curRing{opacity:1}
 @keyframes ndl{0%{transform:rotate(-30deg)}45%{transform:rotate(210deg)}70%{transform:rotate(170deg)}100%{transform:rotate(330deg)}}
 #plWord{font-family:var(--disp);font-size:clamp(1.2rem,3.6vw,2rem);letter-spacing:.55em;text-transform:uppercase;padding-left:.55em}
 .pl-sub{font-size:.62rem;letter-spacing:.62em;text-transform:uppercase;color:rgba(244,223,154,.55);padding-left:.62em}
-.pl-bar{width:min(300px,62vw);height:1px;background:rgba(212,175,55,.2);position:relative}
+.pl-bar{width:min(300px,62vw);height:1px;background:rgba(216,166,60,.2);position:relative}
 #plFill{position:absolute;inset:0 auto 0 0;width:0;background:linear-gradient(90deg,var(--gold-deep),var(--gold-hi));box-shadow:0 0 12px rgba(233,196,101,.9)}
 #plPct{font-size:.68rem;letter-spacing:.34em;color:var(--gold-hi)}
 
@@ -170,7 +171,7 @@ body.loaded .hero-side{opacity:1}
 /* ================= MARQUEE ================= */
 .marquee{overflow:hidden;border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);background:var(--bg2);padding:1.15rem 0}
 .mq-track{display:flex;gap:3.6rem;width:max-content;animation:mq 36s linear infinite}
-.mq-track span{font-family:var(--disp);font-size:1.15rem;letter-spacing:.3em;text-transform:uppercase;white-space:nowrap;color:transparent;-webkit-text-stroke:1px rgba(212,175,55,.55)}
+.mq-track span{font-family:var(--disp);font-size:1.15rem;letter-spacing:.3em;text-transform:uppercase;white-space:nowrap;color:transparent;-webkit-text-stroke:1px rgba(216,166,60,.55)}
 .mq-track b{color:var(--gold);-webkit-text-stroke:0;font-weight:400}
 @keyframes mq{to{transform:translateX(-50%)}}
 
@@ -210,15 +211,15 @@ body.loaded .hero-side{opacity:1}
 .exp-note{max-width:340px;font-size:.9rem;line-height:1.8;color:var(--dim)}
 .exp-list{margin-top:3.4rem;border-bottom:1px solid var(--line)}
 .exp-row{display:grid;grid-template-columns:80px 1.1fr 1fr 64px;gap:1.6rem;align-items:center;padding:2.4rem .6rem;border-top:1px solid var(--line);position:relative;transition:background .5s,padding .5s}
-.exp-row:hover{background:rgba(212,175,55,.05);padding-left:1.4rem}
-.exp-num{font-family:var(--disp);font-size:1.5rem;color:transparent;-webkit-text-stroke:1px rgba(212,175,55,.6)}
+.exp-row:hover{background:rgba(216,166,60,.05);padding-left:1.4rem}
+.exp-num{font-family:var(--disp);font-size:1.5rem;color:transparent;-webkit-text-stroke:1px rgba(216,166,60,.6)}
 .exp-row h3{font-family:var(--disp);font-size:clamp(1.5rem,2.8vw,2.2rem);letter-spacing:.05em;font-weight:400;transition:color .4s}
 .exp-row:hover h3{color:var(--gold-hi)}
 .exp-tags{margin-top:.5rem;font-size:.64rem;letter-spacing:.26em;text-transform:uppercase;color:rgba(244,223,154,.55)}
 .exp-desc{font-size:.9rem;line-height:1.75;color:var(--dim)}
 .exp-arrow{width:52px;height:52px;border:1px solid var(--line);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold-hi);transition:.5s var(--eo)}
 .exp-row:hover .exp-arrow{background:var(--gold);color:#221503;transform:rotate(45deg);box-shadow:0 0 26px rgba(233,196,101,.5)}
-#expFloat{position:fixed;top:0;left:0;width:min(340px,30vw);aspect-ratio:4/3;z-index:800;pointer-events:none;opacity:0;transform:translate(-50%,-56%) rotate(-4deg) scale(.85);transition:opacity .45s var(--eo),transform .45s var(--eo);border:1px solid var(--gold);box-shadow:0 30px 80px -20px rgba(0,0,0,.8),0 0 40px -10px rgba(212,175,55,.4);overflow:hidden}
+#expFloat{position:fixed;top:0;left:0;width:min(340px,30vw);aspect-ratio:4/3;z-index:800;pointer-events:none;opacity:0;transform:translate(-50%,-56%) rotate(-4deg) scale(.85);transition:opacity .45s var(--eo),transform .45s var(--eo);border:1px solid var(--gold);box-shadow:0 30px 80px -20px rgba(0,0,0,.8),0 0 40px -10px rgba(216,166,60,.4);overflow:hidden}
 #expFloat.on{opacity:1;transform:translate(-50%,-56%) rotate(2deg) scale(1)}
 #expFloat img{width:100%;height:100%;object-fit:cover}
 @media (hover:none){#expFloat{display:none}}
@@ -231,7 +232,7 @@ body.loaded .hero-side{opacity:1}
 #routeMap{width:100%;height:auto;display:block}
 #routeMap .route{stroke:url(#gStroke);stroke-width:2.4;fill:none;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;filter:drop-shadow(0 0 6px rgba(233,196,101,.7))}
 #routeMap.in .route{transition:stroke-dashoffset 3.2s ease .3s;stroke-dashoffset:0}
-#routeMap .branch{stroke:rgba(212,175,55,.5);stroke-width:1.3;fill:none;stroke-dasharray:4 6}
+#routeMap .branch{stroke:rgba(216,166,60,.5);stroke-width:1.3;fill:none;stroke-dasharray:4 6}
 #routeMap .stop{cursor:pointer;opacity:0;transition:opacity .8s ease}
 #routeMap.in .stop{opacity:1}
 #routeMap .stop .core{fill:#150d07;stroke:var(--gold);stroke-width:1.6;transition:fill .3s}
@@ -239,7 +240,7 @@ body.loaded .hero-side{opacity:1}
 #routeMap .stop .halo{fill:none;stroke:var(--gold-hi);opacity:.7;animation:halo 2.6s ease infinite;transform-origin:center;transform-box:fill-box}
 @keyframes halo{0%{transform:scale(.4);opacity:.8}100%{transform:scale(2);opacity:0}}
 #routeMap .stop text{fill:var(--gold-hi);font-family:var(--body);font-size:12px;letter-spacing:.18em;text-transform:uppercase}
-#routeMap .deco{stroke:rgba(212,175,55,.13);fill:none}
+#routeMap .deco{stroke:rgba(216,166,60,.13);fill:none}
 #routeMap .rose{animation:spin 44s linear infinite;transform-origin:830px 70px}
 #mapTip{position:absolute;pointer-events:none;background:rgba(11,6,2,.96);border:1px solid var(--gold);padding:.6rem 1rem;font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-hi);opacity:0;transform:translate(-50%,-130%);transition:.3s var(--eo);white-space:nowrap;z-index:5}
 #mapTip.on{opacity:1;transform:translate(-50%,-145%)}
@@ -250,7 +251,7 @@ body.loaded .hero-side{opacity:1}
 .sc-media img{width:100%;height:100%;object-fit:cover;animation:kb 24s ease-in-out infinite alternate}
 .sc-media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 60%,rgba(28,18,8,.9))}
 .sc-body{padding:clamp(1.6rem,4vw,3.4rem);display:flex;flex-direction:column;justify-content:center;position:relative}
-.sc-idx{position:absolute;top:1.4rem;right:1.8rem;font-family:var(--disp);font-size:3.4rem;color:transparent;-webkit-text-stroke:1px rgba(212,175,55,.4)}
+.sc-idx{position:absolute;top:1.4rem;right:1.8rem;font-family:var(--disp);font-size:3.4rem;color:transparent;-webkit-text-stroke:1px rgba(216,166,60,.4)}
 .sc-body h3{font-family:var(--disp);font-size:clamp(1.9rem,3.4vw,2.9rem);letter-spacing:.05em;color:var(--cream)}
 .sc-tag{font-size:.64rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);margin:.6rem 0 1.2rem}
 .sc-body p{font-size:.95rem;line-height:1.85;color:var(--dim);max-width:46ch}
@@ -277,7 +278,7 @@ body.loaded .hero-side{opacity:1}
 .pk-media img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--eo)}
 .pk-card:hover .pk-media img{transform:scale(1.08)}
 .pk-dur{position:absolute;top:1rem;left:1rem;z-index:3;background:rgba(18,11,6,.88);border:1px solid var(--gold);color:var(--gold-hi);font-size:.6rem;letter-spacing:.28em;text-transform:uppercase;padding:.5rem .9rem}
-.pk-flag{position:absolute;top:1rem;right:-8px;z-index:3;background:linear-gradient(120deg,#a97a20,#e9c465,#D4AF37);color:#221503;font-size:.58rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;padding:.5rem 1.1rem}
+.pk-flag{position:absolute;top:1rem;right:-8px;z-index:3;background:linear-gradient(120deg,#a97a20,#e9c465,#d8a63c);color:#221503;font-size:.58rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;padding:.5rem 1.1rem}
 .pk-body{padding:1.7rem 1.6rem 1.8rem;display:flex;flex-direction:column;flex:1}
 .pk-body h3{font-family:var(--disp);font-size:1.7rem;font-weight:400;color:var(--ink-on-cream)}
 .pk-body>p{margin:.7rem 0 1.2rem;font-size:.9rem;line-height:1.75;color:#5a4630;flex:1}
@@ -337,38 +338,24 @@ body.loaded .hero-side{opacity:1}
 .why-card h3{font-family:var(--disp);font-size:1.45rem;font-weight:400;color:var(--ink-on-cream);margin-bottom:.6rem}
 .why-card p{font-size:.88rem;line-height:1.8;color:#5a4630}
 
-/* ================= REVIEWS (3-CARD TESTIMONIALS) ================= */
+/* ================= VOICES ================= */
 #voices{background:linear-gradient(180deg,var(--indigo-deep),#12102a);overflow:hidden}
-#voices::before{content:"ⵜⵏ";position:absolute;top:6%;right:-1%;font-size:clamp(6rem,15vw,12rem);color:rgba(212,175,55,.06);pointer-events:none}
+#voices::before{content:"ⵜⵏ";position:absolute;top:6%;right:-1%;font-size:clamp(6rem,15vw,12rem);color:rgba(216,166,60,.06);pointer-events:none}
 #dustTest{position:absolute;inset:0;pointer-events:none}
-.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3.4rem}
-.rev-card{background:linear-gradient(180deg,rgba(34,21,7,.5),rgba(20,12,6,.85));border:1px solid var(--line);padding:2.6rem 2.2rem;position:relative;transition:transform .6s var(--eo),box-shadow .6s,border-color .6s}
-.rev-card::before{content:"“";position:absolute;top:.4rem;right:1.3rem;font-family:var(--serif);font-size:5.2rem;color:rgba(212,175,55,.16);line-height:1}
-.rev-card:hover{transform:translateY(-10px);border-color:var(--gold);box-shadow:0 30px 60px -24px rgba(0,0,0,.8),0 0 34px -8px rgba(212,175,55,.35)}
-.rev-stars{color:var(--gold);letter-spacing:.45em;font-size:.8rem;text-shadow:0 0 10px rgba(212,175,55,.6)}
-.rev-quote{font-family:var(--serif);font-style:italic;font-weight:500;font-size:1.12rem;line-height:1.75;color:var(--cream);margin:1.3rem 0 1.8rem}
-.rev-auth{display:flex;align-items:center;gap:1rem;border-top:1px solid var(--line-soft);padding-top:1.4rem}
-.rev-av{width:46px;height:46px;border-radius:50%;border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;font-family:var(--disp);font-size:1rem;color:var(--gold-hi);letter-spacing:.1em;flex:none;background:rgba(212,175,55,.08)}
-.rev-auth b{display:block;font-weight:500;font-size:.92rem;letter-spacing:.08em;color:var(--cream)}
-.rev-auth .c{font-size:.64rem;letter-spacing:.3em;text-transform:uppercase;color:rgba(244,223,154,.55)}
-
-/* ================= FAQ (ACCORDION) ================= */
-#faq{background:var(--bg2)}
-.faq{max-width:880px;margin:3.4rem auto 0;border-top:1px solid var(--line)}
-.faq-item{border-bottom:1px solid var(--line)}
-.faq-q{width:100%;background:none;border:0;display:flex;align-items:center;gap:1.3rem;padding:1.7rem .4rem;color:var(--cream);font-family:var(--disp);font-size:clamp(1.15rem,2.2vw,1.55rem);letter-spacing:.05em;text-align:left;cursor:pointer;transition:color .35s}
-.faq-q:hover{color:var(--gold-hi)}
-.faq-num{font-size:.85rem;letter-spacing:.2em;color:transparent;-webkit-text-stroke:1px rgba(212,175,55,.65);flex:none}
-.faq-ic{position:relative;width:34px;height:34px;border:1px solid var(--line);border-radius:50%;flex:none;margin-left:auto;transition:transform .55s var(--eo),background .4s,border-color .4s}
-.faq-ic::before,.faq-ic::after{content:"";position:absolute;left:50%;top:50%;background:var(--gold-hi);transition:background .4s}
-.faq-ic::before{width:12px;height:1px;transform:translate(-50%,-50%)}
-.faq-ic::after{width:1px;height:12px;transform:translate(-50%,-50%)}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .7s var(--eo)}
-.faq-a p{padding:0 3.4rem 1.8rem 3.1rem;color:var(--dim);line-height:1.9;font-size:.97rem}
-.faq-a p b{color:var(--gold-hi);font-weight:500}
-.faq-item.open .faq-q{color:var(--gold-hi)}
-.faq-item.open .faq-ic{background:var(--gold);border-color:var(--gold);transform:rotate(135deg)}
-.faq-item.open .faq-ic::before,.faq-item.open .faq-ic::after{background:#221503}
+.t-stage{position:relative;max-width:880px;margin:3rem auto 0;min-height:320px;text-align:center}
+.t-slide{position:absolute;inset:0;opacity:0;transform:translateY(28px);transition:opacity 1s var(--eo),transform 1s var(--eo);pointer-events:none}
+.t-slide.on{opacity:1;transform:none;pointer-events:auto}
+.t-stars{color:var(--gold);letter-spacing:.5em;font-size:.85rem}
+.t-quote{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(1.35rem,3vw,2rem);line-height:1.55;color:var(--cream);margin:1.5rem 0 1.9rem}
+.t-quote::before{content:"“";color:var(--gold);font-size:1.3em}
+.t-auth{font-size:.72rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold-hi);font-weight:500}
+.t-auth span{display:block;margin-top:.35rem;font-weight:300;letter-spacing:.22em;color:rgba(241,231,211,.5)}
+.t-nav{display:flex;justify-content:center;align-items:center;gap:1.6rem;margin-top:2.6rem}
+.t-arrow{width:48px;height:48px;border-radius:50%;border:1px solid var(--line);background:none;color:var(--gold-hi);cursor:pointer;transition:.35s}
+.t-arrow:hover{background:var(--gold);color:#221503;box-shadow:0 0 24px rgba(233,196,101,.5)}
+.t-ring{width:44px;height:44px;transform:rotate(-90deg)}
+.t-ring .bg{fill:none;stroke:rgba(216,166,60,.2);stroke-width:2}
+.t-ring .fg{fill:none;stroke:var(--gold-hi);stroke-width:2;stroke-linecap:round;stroke-dasharray:100.53;stroke-dashoffset:100.53;filter:drop-shadow(0 0 4px rgba(244,223,154,.8))}
 
 /* ================= CONTACT ================= */
 #contact{background:linear-gradient(180deg,var(--cream),var(--cream2));color:var(--ink-on-cream)}
@@ -385,9 +372,6 @@ body.loaded .hero-side{opacity:1}
 .ct-row b{display:block;font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:#8a6c46;font-weight:500}
 .ct-row a,.ct-row .v{font-size:.98rem;color:var(--ink-on-cream);font-weight:400}
 .ct-row a:hover{color:var(--gold-deep)}
-.ct-social{display:flex;gap:.9rem;margin-top:2.2rem;flex-wrap:wrap}
-.ct-social a{width:48px;height:48px;border:1px solid rgba(138,92,26,.4);display:flex;align-items:center;justify-content:center;color:var(--gold-deep);transition:.4s var(--eo)}
-.ct-social a:hover{background:var(--gold-deep);color:var(--cream);transform:translateY(-4px);box-shadow:0 12px 26px -10px rgba(138,92,26,.6)}
 .ct-form{border:1px solid rgba(138,92,26,.3);background:#fbf5e9;padding:clamp(1.6rem,3.4vw,2.8rem);box-shadow:0 30px 70px -34px rgba(60,35,10,.5)}
 .ct-form h4{font-family:var(--disp);font-size:1.6rem;font-weight:400;margin-bottom:1.5rem;color:var(--ink-on-cream)}
 .f-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
@@ -400,19 +384,18 @@ body.loaded .hero-side{opacity:1}
 
 /* ================= FOOTER ================= */
 footer{background:#0a0502;border-top:1px solid var(--line-soft);padding:4.5rem 0 0}
-.ft-giant{font-family:var(--disp);font-size:clamp(2.6rem,9vw,8rem);line-height:1;text-align:center;color:transparent;-webkit-text-stroke:1px rgba(212,175,55,.28);letter-spacing:.08em;user-select:none}
+.ft-giant{font-family:var(--disp);font-size:clamp(2.6rem,9vw,8rem);line-height:1;text-align:center;color:transparent;-webkit-text-stroke:1px rgba(216,166,60,.28);letter-spacing:.08em;user-select:none}
 .ft-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:3rem;padding:3.4rem 0}
 .ft-h{font-size:.68rem;letter-spacing:.36em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem}
 .ft-grid p{font-size:.9rem;line-height:1.85;color:rgba(241,231,211,.55);max-width:360px;margin-top:.8rem}
 .ft-links a{display:block;font-size:.88rem;color:rgba(241,231,211,.65);margin-bottom:.65rem;transition:.3s}
 .ft-links a:hover{color:var(--gold-hi);padding-left:.5rem}
-.ft-tif{letter-spacing:.6em;color:rgba(212,175,55,.4);font-size:.8rem}
-.ft-bar{border-top:1px solid rgba(212,175,55,.12);padding:1.4rem 0;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(241,231,211,.4)}
+.ft-tif{letter-spacing:.6em;color:rgba(216,166,60,.4);font-size:.8rem}
+.ft-bar{border-top:1px solid rgba(216,166,60,.12);padding:1.4rem 0;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(241,231,211,.4)}
 #toTop{width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:none;color:var(--gold-hi);cursor:pointer;transition:.35s}
 #toTop:hover{background:var(--gold);color:#221503}
 
-/* WhatsApp floating button — link format: https://wa.me/COUNTRY_CODE_NUMBER */
-#wa{position:fixed;right:22px;bottom:22px;z-index:900;width:58px;height:58px;border-radius:50%;background:linear-gradient(135deg,#a97a20,#e9c465,#D4AF37);display:flex;align-items:center;justify-content:center;color:#221503;box-shadow:0 14px 34px -10px rgba(233,196,101,.7);transition:.4s var(--eo)}
+#wa{position:fixed;right:22px;bottom:22px;z-index:900;width:58px;height:58px;border-radius:50%;background:linear-gradient(135deg,#a97a20,#e9c465,#d8a63c);display:flex;align-items:center;justify-content:center;color:#221503;box-shadow:0 14px 34px -10px rgba(233,196,101,.7);transition:.4s var(--eo)}
 #wa:hover{transform:translateY(-5px) scale(1.06)}
 #wa::after{content:"";position:absolute;inset:0;border-radius:50%;border:1px solid var(--gold-hi);animation:wap 2.4s ease infinite}
 @keyframes wap{to{transform:scale(1.7);opacity:0}}
@@ -425,12 +408,12 @@ footer{background:#0a0502;border-top:1px solid var(--line-soft);padding:4.5rem 0
   .nav-links{display:none}#burger{display:block}
   .story-grid,.ct-grid{grid-template-columns:1fr}
   .story-left{position:static}
-  .rev-grid{grid-template-columns:1fr}
   .stack-card{position:relative;top:0!important;grid-template-columns:1fr;min-height:0;margin-bottom:2.4rem}
   .sc-media{aspect-ratio:16/10}.sc-media::after{background:linear-gradient(to top,rgba(28,18,8,.85),transparent 50%)!important}
   .stack-card.flip .sc-media{order:0}
   .exp-row{grid-template-columns:52px 1fr;gap:1rem}
   .exp-desc{grid-column:2}.exp-arrow{display:none}
+  .g-masonry{columns:2}
   .ft-grid{grid-template-columns:1fr}
 }
 @media(max-width:640px){
@@ -439,7 +422,6 @@ footer{background:#0a0502;border-top:1px solid var(--line-soft);padding:4.5rem 0
   .story-figs{grid-template-columns:1fr}
   .fig.f-c{max-width:100%}
   .hero-meta .mid{display:none}
-  .faq-a p{padding-left:.4rem;padding-right:.4rem}
 }
 
 /* ================= REDUCED MOTION ================= */
@@ -462,9 +444,9 @@ footer{background:#0a0502;border-top:1px solid var(--line-soft);padding:4.5rem 0
   <div class="shutter sh-top"></div><div class="shutter sh-bot"></div>
   <div class="pl-inner">
     <svg class="pl-comp" viewBox="0 0 120 120" fill="none">
-      <circle cx="60" cy="60" r="54" stroke="#D4AF37" stroke-opacity=".35"/>
+      <circle cx="60" cy="60" r="54" stroke="#d8a63c" stroke-opacity=".35"/>
       <g class="ticks"><circle cx="60" cy="60" r="46" stroke="#e9c465" stroke-width="1.4" stroke-dasharray="2 8"/></g>
-      <circle cx="60" cy="60" r="33" stroke="#D4AF37" stroke-opacity=".2"/>
+      <circle cx="60" cy="60" r="33" stroke="#d8a63c" stroke-opacity=".2"/>
       <g class="ndl"><path d="M60 22 L66 60 L60 98 L54 60 Z" fill="url(#pg)"/><path d="M60 22 L66 60 L54 60 Z" fill="#fff3c4"/></g>
       <circle cx="60" cy="60" r="4" fill="#f4df9a"/>
       <defs><linearGradient id="pg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f4df9a"/><stop offset="1" stop-color="#8a5c1a"/></linearGradient></defs>
@@ -484,7 +466,7 @@ footer{background:#0a0502;border-top:1px solid var(--line-soft);padding:4.5rem 0
 <header id="nav">
   <div class="nav-in">
     <a href="#hero" class="logo" aria-label="Foum Zguid Trip — home">
-      <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" stroke="#D4AF37" stroke-width="1.2"/><path d="M20 6 L24 20 L20 34 L16 20 Z" fill="#e9c465"/><circle cx="20" cy="20" r="2.4" fill="#f4df9a"/></svg>
+      <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" stroke="#d8a63c" stroke-width="1.2"/><path d="M20 6 L24 20 L20 34 L16 20 Z" fill="#e9c465"/><circle cx="20" cy="20" r="2.4" fill="#f4df9a"/></svg>
       <span>Foum Zguid <em>trip</em></span>
     </a>
     <nav class="nav-links">
@@ -495,7 +477,7 @@ footer{background:#0a0502;border-top:1px solid var(--line-soft);padding:4.5rem 0
   </div>
 </header>
 <div id="menu">
-  <a href="#story">The Story</a><a href="#experiences">Experiences</a><a href="#destinations">The Route</a><a href="#packages">Journeys</a><a href="#gallery">Archive</a><a href="#voices">Reviews</a><a href="#faq">FAQ</a><a href="#contact">Book Your Trip</a>
+  <a href="#story">The Story</a><a href="#experiences">Experiences</a><a href="#destinations">The Route</a><a href="#packages">Journeys</a><a href="#gallery">Archive</a><a href="#voices">Voices</a><a href="#contact">Book Your Trip</a>
 </div>
 
 <!-- HERO -->
@@ -515,7 +497,7 @@ footer{background:#0a0502;border-top:1px solid var(--line-soft);padding:4.5rem 0
     </div>
   </div>
   <div class="hero-meta">
-    <span>Family Run — Born of the Oasis</span>
+    <span>Est. MMXII — Family Run</span>
     <span class="mid"><span>Erg Chigaga</span><i>✦</i><span>Lake Iriki</span><i>✦</i><span>M'Hamid</span></span>
     <div class="scroll-cue"><span>Scroll</span><i></i></div>
   </div>
@@ -539,7 +521,7 @@ footer{background:#0a0502;border-top:1px solid var(--line-soft);padding:4.5rem 0
   </div>
 </section>
 
-<!-- STORY (with fixed statistics) -->
+<!-- STORY -->
 <section id="story">
   <div class="wrap story-grid">
     <div class="story-left rv rv-l">
@@ -547,10 +529,10 @@ footer{background:#0a0502;border-top:1px solid var(--line-soft);padding:4.5rem 0
       <h2 class="sec-title">Born of<br>the Dunes</h2>
       <div class="rule"></div>
       <div class="story-stats">
-        <div class="stat"><div class="stat-n">+<span data-count="1200">0</span></div><div class="stat-l">Happy Travellers</div></div>
-        <div class="stat"><div class="stat-n"><span data-count="150">0</span> km</div><div class="stat-l">Of Golden Dunes</div></div>
-        <div class="stat"><div class="stat-n">+<span data-count="8">0</span> Years</div><div class="stat-l">Years of Guiding</div></div>
-        <div class="stat"><div class="stat-n"><span data-count="99">0</span>%</div><div class="stat-l">Five-Star Reviews</div></div>
+        <div class="stat"><div class="stat-n"><span data-count="500">0</span>+</div><div class="stat-l">Happy Travellers</div></div>
+        <div class="stat"><div class="stat-n"><span data-count="50">0</span> km</div><div class="stat-l">Of Golden Dunes</div></div>
+        <div class="stat"><div class="stat-n"><span data-count="12">0</span>+</div><div class="stat-l">Years Guiding</div></div>
+        <div class="stat"><div class="stat-n"><span data-count="98">0</span>%</div><div class="stat-l">Five-Star Reviews</div></div>
       </div>
     </div>
     <div class="story-right rv rv-r" style="--d:.15s">
@@ -567,7 +549,7 @@ footer{background:#0a0502;border-top:1px solid var(--line-soft);padding:4.5rem 0
   </div>
 </section>
 
-<div class="divider"></div>
+<div class="divider" style="--bg:var(--bg)"></div>
 
 <!-- EXPERIENCES -->
 <section id="experiences">
@@ -628,12 +610,12 @@ footer{background:#0a0502;border-top:1px solid var(--line-soft);padding:4.5rem 0
     <div class="map-panel rv">
       <div id="mapTip"></div>
       <svg id="routeMap" viewBox="0 0 900 560" role="img" aria-label="Golden route map: Marrakech to Zagora, M'Hamid, Foum Zguid, Erg Chigaga and Merzouga">
-        <defs><linearGradient id="gStroke" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8a5c1a"/><stop offset=".5" stop-color="#f4df9a"/><stop offset="1" stop-color="#D4AF37"/></linearGradient></defs>
+        <defs><linearGradient id="gStroke" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8a5c1a"/><stop offset=".5" stop-color="#f4df9a"/><stop offset="1" stop-color="#d8a63c"/></linearGradient></defs>
         <path class="deco" d="M0 470 Q 150 430 300 470 T 600 470 T 900 470"/>
         <path class="deco" d="M0 505 Q 180 465 360 505 T 720 505 T 900 500"/>
         <path class="deco" d="M60 60 Q 200 30 340 62"/>
-        <g class="rose" stroke="#D4AF37" fill="none"><circle cx="830" cy="70" r="26"/><circle cx="830" cy="70" r="3" fill="#e9c465" stroke="none"/><path d="M830 40 L836 70 L830 100 L824 70 Z" fill="#D4AF37" stroke="none" opacity=".8"/><path d="M800 70 L830 64 L860 70 L830 76 Z" fill="#8a5c1a" stroke="none" opacity=".8"/></g>
-        <text x="830" y="116" text-anchor="middle" fill="#D4AF37" font-size="10" letter-spacing="3" opacity=".7">N</text>
+        <g class="rose" stroke="#d8a63c" fill="none"><circle cx="830" cy="70" r="26"/><circle cx="830" cy="70" r="3" fill="#e9c465" stroke="none"/><path d="M830 40 L836 70 L830 100 L824 70 Z" fill="#d8a63c" stroke="none" opacity=".8"/><path d="M800 70 L830 64 L860 70 L830 76 Z" fill="#8a5c1a" stroke="none" opacity=".8"/></g>
+        <text x="830" y="116" text-anchor="middle" fill="#d8a63c" font-size="10" letter-spacing="3" opacity=".7">N</text>
         <path class="route" pathLength="1" d="M140 95 C 230 140 320 172 400 215 C 470 252 530 272 585 300 C 540 340 470 368 415 395 C 480 420 555 428 625 430 C 700 330 760 240 795 140"/>
         <path class="branch" d="M585 300 C 610 282 632 262 655 240"/>
         <g class="stop" data-name="Marrakech — the Red City, journey's start" data-card="" style="transition-delay:.6s"><circle class="halo" cx="140" cy="95" r="9"/><circle class="core" cx="140" cy="95" r="6"/><text x="140" y="76" text-anchor="middle">Marrakech</text></g>
@@ -649,7 +631,7 @@ footer{background:#0a0502;border-top:1px solid var(--line-soft);padding:4.5rem 0
     <div class="stack">
       <article class="stack-card" id="sc-chigaga" style="--i:0">
         <div class="sc-media tint"><img loading="lazy" src="https://image.qwenlm.ai/public_source/1039812c-9b4d-414d-b8c7-2589b2cefe16/18cf6c066-be0f-4fb7-8454-3c84c4220fa5.png" alt="Erg Chigaga dune sea at golden hour"></div>
-        <div class="sc-body"><span class="sc-idx">01</span><h3>Erg Chigaga</h3><div class="sc-tag">The Great Dune Sea</div><p>Morocco's largest and wildest erg — golden cathedrals three hundred metres high, reachable only by 4×4 or camel. This is where our bivouacs burn brightest.</p><div class="sc-hl"><span>Sunset Summits</span><span>Star Bivouacs</span><span>Absolute Silence</span></div><div class="sc-coord">29.83° N · 6.08° W — 150 km of dunes</div></div>
+        <div class="sc-body"><span class="sc-idx">01</span><h3>Erg Chigaga</h3><div class="sc-tag">The Great Dune Sea</div><p>Morocco's largest and wildest erg — golden cathedrals three hundred metres high, reachable only by 4×4 or camel. This is where our bivouacs burn brightest.</p><div class="sc-hl"><span>Sumset Summits</span><span>Star Bivouacs</span><span>Absolute Silence</span></div><div class="sc-coord">29.83° N · 6.08° W — 50 km of dunes</div></div>
       </article>
       <article class="stack-card flip" id="sc-mhamid" style="--i:1">
         <div class="sc-media tint"><img loading="lazy" src="https://image.qwenlm.ai/public_source/1039812c-9b4d-414d-b8c7-2589b2cefe16/111460c67-a32f-4b40-87f3-b6cff9eff650.png" alt="M'Hamid oasis meeting the dunes"></div>
@@ -771,74 +753,25 @@ footer{background:#0a0502;border-top:1px solid var(--line-soft);padding:4.5rem 0
   </div>
 </section>
 
-<!-- ============ REVIEWS — 3-CARD TESTIMONIALS ============ -->
-<section id="voices" aria-label="Customer reviews">
+<!-- VOICES -->
+<section id="voices">
   <canvas id="dustTest"></canvas>
   <div class="wrap" style="position:relative">
     <div class="sec-head rv" style="text-align:center">
-      <span class="kick scr" data-text="CHAPTER 07 — THE GUEST BOOK">CHAPTER 07 — THE GUEST BOOK</span>
-      <h2 class="sec-title gold-foil">What Travellers Say</h2>
+      <span class="kick scr" data-text="CHAPTER 07 — THE VOICES">CHAPTER 07 — THE VOICES</span>
+      <h2 class="sec-title gold-foil">What Travellers Carry Home</h2>
       <div class="rule" style="margin-left:auto;margin-right:0"></div>
     </div>
-    <div class="rev-grid">
-      <article class="rev-card rv">
-        <div class="rev-stars" aria-label="5 out of 5 stars">✦ ✦ ✦ ✦ ✦</div>
-        <p class="rev-quote">The sunset over the Chegaga dunes was the most beautiful thing I have ever witnessed. Our guide was a true professional — patient, kind and full of stories. I felt safe and welcome every single moment.</p>
-        <div class="rev-auth"><span class="rev-av">SL</span><div><b>Sarah L.</b><span class="c">France</span></div></div>
-      </article>
-      <article class="rev-card rv" style="--d:.12s">
-        <div class="rev-stars" aria-label="5 out of 5 stars">✦ ✦ ✦ ✦ ✦</div>
-        <p class="rev-quote">The 4×4 adventure across the desert was pure adrenaline — dunes, dry lakes, incredible driving. And the food! The traditional tagine and fresh bread baked in the sand were absolutely delicious.</p>
-        <div class="rev-auth"><span class="rev-av">MT</span><div><b>Markus T.</b><span class="c">Germany</span></div></div>
-      </article>
-      <article class="rev-card rv" style="--d:.24s">
-        <div class="rev-stars" aria-label="5 out of 5 stars">✦ ✦ ✦ ✦ ✦</div>
-        <p class="rev-quote">I slept under a million stars and woke to a golden silence. That night in the desert was truly magical — I have never seen a sky like it. I will carry it with me forever.</p>
-        <div class="rev-auth"><span class="rev-av">ER</span><div><b>Elena R.</b><span class="c">Spain</span></div></div>
-      </article>
+    <div class="t-stage rv" id="tStage">
+      <div class="t-slide on"><div class="t-stars">✦ ✦ ✦ ✦ ✦</div><p class="t-quote">The night at Erg Chigaga rearranged something in me. The silence, the drums, the stars — no brochure could ever hold it.</p><div class="t-auth">Emma R. <span>London, United Kingdom</span></div></div>
+      <div class="t-slide"><div class="t-stars">✦ ✦ ✦  ✦</div><p class="t-quote">Hassan's team treated us like family, not tourists. The 4×4 crossing of Lake Iriki at sunset was pure cinema.</p><div class="t-auth">Marco B. <span>Milan, Italy</span></div></div>
+      <div class="t-slide"><div class="t-stars">✦ ✦  ✦ ✦</div><p class="t-quote">I had done Merzouga before, but Foum Zguid is the Sahara without the crowds. Pure, golden, endless.</p><div class="t-auth">Sophie L. <span>Paris, France</span></div></div>
+      <div class="t-slide"><div class="t-stars">✦ ✦  ✦ ✦</div><p class="t-quote">From the first WhatsApp message to the last glass of mint tea, everything felt effortless, honest and true.</p><div class="t-auth">Daniel K. <span>New York, USA</span></div></div>
     </div>
-  </div>
-</section>
-
-<!-- ============ FAQ — ACCORDION ============ -->
-<section id="faq" aria-label="Frequently asked questions">
-  <div class="wrap">
-    <div class="sec-head rv" style="text-align:center">
-      <span class="kick scr" data-text="CHAPTER 08 — THE ANSWERS">CHAPTER 08 — THE ANSWERS</span>
-      <h2 class="sec-title">Questions, Answered</h2>
-      <div class="rule" style="margin-left:auto;margin-right:0"></div>
-    </div>
-    <div class="faq rv">
-      <div class="faq-item">
-        <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a1">
-          <span class="faq-num">01</span>
-          How do we get to Foum Zguid?
-          <span class="faq-ic" aria-hidden="true"></span>
-        </button>
-        <div class="faq-a" id="faq-a1" role="region">
-          <p>You can reach Foum Zguid <b>by car from Marrakech or Ouarzazate</b>, or we can arrange a <b>private transfer</b> for you.</p>
-        </div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a2">
-          <span class="faq-num">02</span>
-          What should I pack for the desert?
-          <span class="faq-ic" aria-hidden="true"></span>
-        </button>
-        <div class="faq-a" id="faq-a2" role="region">
-          <p>Comfortable loose clothing, sunglasses, sunscreen, a hat, and a <b>warm jacket for the chilly desert nights</b>.</p>
-        </div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a3">
-          <span class="faq-num">03</span>
-          Is there phone signal or internet in the dunes?
-          <span class="faq-ic" aria-hidden="true"></span>
-        </button>
-        <div class="faq-a" id="faq-a3" role="region">
-          <p>Signal is limited in the deep desert, allowing you to fully disconnect and enjoy the true nomadic lifestyle. <b>Emergency satellite communication is always available.</b></p>
-        </div>
-      </div>
+    <div class="t-nav rv">
+      <button class="t-arrow" id="tPrev" aria-label="Previous testimonial">←</button>
+      <svg class="t-ring" viewBox="0 0 40 40"><circle class="bg" cx="20" cy="20" r="16"/><circle class="fg" id="tRingC" cx="20" cy="20" r="16"/></svg>
+      <button class="t-arrow" id="tNext" aria-label="Next testimonial">→</button>
     </div>
   </div>
 </section>
@@ -847,7 +780,7 @@ footer{background:#0a0502;border-top:1px solid var(--line-soft);padding:4.5rem 0
 <section id="contact">
   <div class="wrap">
     <div class="sec-head rv" style="text-align:center">
-      <span class="kick scr" data-text="CHAPTER 09 — THE INVITATION">CHAPTER 09 — THE INVITATION</span>
+      <span class="kick scr" data-text="CHAPTER 08 — THE INVITATION">CHAPTER 08 — THE INVITATION</span>
       <h2 class="sec-title">Book Your Trip</h2>
       <div class="rule" style="margin-left:auto;margin-right:0"></div>
     </div>
@@ -856,47 +789,17 @@ footer{background:#0a0502;border-top:1px solid var(--line-soft);padding:4.5rem 0
         <h3>The desert is calling.<br><em>Answer in gold.</em></h3>
         <p>Write to us on WhatsApp or Instagram and a member of the family will craft your itinerary personally — usually within a few hours, always with mint tea in hand.</p>
         <div class="ct-rows">
-          <!-- ✏️ WHATSAPP LINK FORMAT: https://wa.me/COUNTRY_CODE_NUMBER (no +, no spaces) -->
-          <div class="ct-row"><i><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3a9 9 0 00-7.8 13.5L3 21l4.7-1.2A9 9 0 1012 3z"/></svg></i><div><b>WhatsApp</b><a href="https://wa.me/212767524630?text=Hello%20Foum%20Zguid%20Trip!%20I%20would%20like%20to%20book%20a%20desert%20journey." target="_blank" rel="noopener">+212 767-524630</a></div></div>
+          <div class="ct-row"><i><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3a9 9 0 00-7.8 13.5L3 21l4.7-1.2A9 9 0 1012 3z"/></svg></i><div><b>WhatsApp</b><a href="https://wa.me/212661234567?text=Hello%20Foum%20Zguid%20Trip!%20I%20would%20like%20to%20book%20a%20desert%20journey." target="_blank" rel="noopener">+212 661 234 567</a></div></div>
           <div class="ct-row"><i><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></svg></i><div><b>Email</b><a href="mailto:foumzguidtrip@gmail.com">foumzguidtrip@gmail.com</a></div></div>
           <div class="ct-row"><i><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="4" width="16" height="16" rx="4"/><circle cx="12" cy="12" r="3.5"/><circle cx="17" cy="7" r="1" fill="currentColor" stroke="none"/></svg></i><div><b>Instagram</b><a href="https://instagram.com/_foum_zguid_trip" target="_blank" rel="noopener">@_foum_zguid_trip</a></div></div>
           <div class="ct-row"><i><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s7-6 7-11a7 7 0 10-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></i><div><b>Base Camp</b><span class="v">Foum Zguid, Tata Province, Morocco</span></div></div>
         </div>
-
-        <!-- ✏️ SOCIAL ICONS — paste your own links inside each href below -->
-        <nav class="ct-social" aria-label="Social media">
-          <!-- Instagram → paste: https://www.instagram.com/YOUR_PROFILE -->
-          <a href="https://instagram.com/_foum_zguid_trip" target="_blank" rel="noopener" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="4" width="16" height="16" rx="4"/><circle cx="12" cy="12" r="3.5"/><circle cx="17" cy="7" r="1" fill="currentColor" stroke="none"/></svg></a>
-          <!-- Facebook → paste: https://www.facebook.com/YOUR_PAGE -->
-          <a href="https://www.facebook.com/YOUR_PAGE" target="_blank" rel="noopener" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 8h3V4h-3a4 4 0 00-4 4v3H7v4h3v7h4v-7h3l1-4h-4V8z"/></svg></a>
-          <!-- WhatsApp → format: https://wa.me/212767524630 -->
-          <a href="https://wa.me/212767524630" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3a9 9 0 00-7.8 13.5L3 21l4.7-1.2A9 9 0 1012 3z"/></svg></a>
-          <!-- TripAdvisor / YouTube → paste your link -->
-          <a href="https://www.tripadvisor.com/YOUR_PROFILE" target="_blank" rel="noopener" aria-label="TripAdvisor"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="13" r="3"/><circle cx="16" cy="13" r="3"/><path d="M3 10c3-2.5 15-2.5 18 0M12 10v1"/></svg></a>
-        </nav>
       </div>
-
-      <!-- ✏️ FORM: set action to your handler (Formspree / backend / mailto). Inputs carry name attributes so data is sent correctly. -->
-      <form class="ct-form rv rv-r" id="bookForm" style="--d:.15s"
-            action="mailto:foumzguidtrip@gmail.com" method="post" enctype="text/plain">
+      <form class="ct-form rv rv-r" id="bookForm" style="--d:.15s">
         <h4>Request Your Itinerary</h4>
-        <div class="f-row">
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="email" name="email" placeholder="Email Address" required>
-        </div>
-        <div class="f-row">
-          <input type="date" name="date" aria-label="Travel date">
-          <select name="experience" required>
-            <option value="" disabled selected>Select Experience</option>
-            <option>Sunset Camel Ride — Half Day</option>
-            <option>Erg Chigaga 4×4 Expedition — Full Day</option>
-            <option>Starlight Bivouac — 2 Days</option>
-            <option>Grand Sahara Odyssey — Multi-Day</option>
-            <option>Berber Cultural Experience</option>
-            <option>Custom Journey</option>
-          </select>
-        </div>
-        <textarea name="message" rows="5" placeholder="Tell us your dream — travellers, dates, wishes…"></textarea>
+        <div class="f-row"><input type="text" placeholder="Your Name" required><input type="email" placeholder="Email Address" required></div>
+        <div class="f-row"><input type="date" aria-label="Travel date"><select required><option value="" disabled selected>Select Experience</option><option>Sunset Camel Ride — Half Day</option><option>Erg Chigaga 4×4 Expedition — Full Day</option><option>Starlight Bivouac — 2 Days</option><option>Grand Sahara Odyssey — Multi-Day</option><option>Berber Cultural Experience</option><option>Custom Journey</option></select></div>
+        <textarea rows="5" placeholder="Tell us your dream — travellers, dates, wishes…"></textarea>
         <button type="submit" class="btn btn-gold" style="width:100%;justify-content:center">Send Golden Request ✦</button>
       </form>
     </div>
@@ -909,16 +812,15 @@ footer{background:#0a0502;border-top:1px solid var(--line-soft);padding:4.5rem 0
   <div class="wrap">
     <div class="ft-giant rv">FOUM ZGUID TRIP</div>
     <div class="ft-grid">
-      <div><div class="ft-h">The House</div><p>Luxury Sahara expeditions from the gateway of Foum Zguid — Erg Chigaga, Lake Iriki and the old caravan roads, guided by the desert's own family.</p><p class="ft-tif" style="margin-top:1rem">ⵜⵉⵏⴻⵔ · THE DESERT</p></div>
-      <div><div class="ft-h">Explore</div><div class="ft-links"><a href="#story">The Story</a><a href="#experiences">Experiences</a><a href="#destinations">The Route</a><a href="#packages">Journeys</a><a href="#gallery">Archive</a><a href="#faq">FAQ</a></div></div>
-      <div><div class="ft-h">Contact</div><div class="ft-links"><a href="https://instagram.com/_foum_zguid_trip" target="_blank" rel="noopener">@_foum_zguid_trip</a><a href="mailto:foumzguidtrip@gmail.com">foumzguidtrip@gmail.com</a><a href="https://wa.me/212767524630" target="_blank" rel="noopener">WhatsApp +212 767-524630</a><a href="#contact">Foum Zguid, Morocco</a></div></div>
+      <div><div class="ft-h">The House</div><p>Luxury Sahara expeditions from the gateway of Foum Zguid — Erg Chigaga, Lake Iriki and the old caravan roads, guided by the desert's own family since 2012.</p><p class="ft-tif" style="margin-top:1rem">ⵜⵉⵏⴻⵔ · THE DESERT</p></div>
+      <div><div class="ft-h">Explore</div><div class="ft-links"><a href="#story">The Story</a><a href="#experiences">Experiences</a><a href="#destinations">The Route</a><a href="#packages">Journeys</a><a href="#gallery">Archive</a></div></div>
+      <div><div class="ft-h">Contact</div><div class="ft-links"><a href="https://instagram.com/_foum_zguid_trip" target="_blank" rel="noopener">@_foum_zguid_trip</a><a href="mailto:foumzguidtrip@gmail.com">foumzguidtrip@gmail.com</a><a href="https://wa.me/212661234567" target="_blank" rel="noopener">WhatsApp +212 661 234 567</a><a href="#contact">Foum Zguid, Morocco</a></div></div>
     </div>
     <div class="ft-bar"><span>© <span id="year"></span> Foum Zguid Trip — All rights reserved</span><span>Gateway to the Sahara ✦ Morocco</span><button id="toTop" aria-label="Back to top">↑</button></div>
   </div>
 </footer>
 
-<!-- Floating WhatsApp — link format: https://wa.me/212767524630 -->
-<a id="wa" href="https://wa.me/212767524630?text=Hello%20Foum%20Zguid%20Trip!" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3a9 9 0 00-7.8 13.5L3 21l4.7-1.2A9 9 0 1012 3z"/><path d="M9 9.5c.5 2.5 3 5 5.5 5.5l1-1.5 2 1c-.5 1.5-1.5 2-3 1.5-3-1-5.5-3.5-6.5-6.5-.5-1.5 0-2.5 1.5-3z"/></svg></a>
+<a id="wa" href="https://wa.me/212661234567?text=Hello%20Foum%20Zguid%20Trip!" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3a9 9 0 00-7.8 13.5L3 21l4.7-1.2A9 9 0 1012 3z"/><path d="M9 9.5c.5 2.5 3 5 5.5 5.5l1-1.5 2 1c-.5 1.5-1.5 2-3 1.5-3-1-5.5-3.5-6.5-6.5-.5-1.5 0-2.5 1.5-3z"/></svg></a>
 <div id="toast">✦ Request received — we reply within hours, insha'Allah</div>
 
 <script>
@@ -994,7 +896,7 @@ if(FINE && !RM){
     dot.style.transform="translate("+(mx-3)+"px,"+(my-3)+"px)";
     ring.style.transform="translate("+(rx-ring.offsetWidth/2)+"px,"+(ry-ring.offsetHeight/2)+"px)";
     requestAnimationFrame(cl); })();
-  $$("a,button,.exp-row,.g-item,.pk-card,.faq-q").forEach(function(el){
+  $$("a,button,.exp-row,.g-item,.pk-card").forEach(function(el){
     el.addEventListener("mouseenter",function(){ ring.classList.add("big"); });
     el.addEventListener("mouseleave",function(){ ring.classList.remove("big"); });
   });
@@ -1046,19 +948,15 @@ var io=new IntersectionObserver(function(es){
 $$(".rv,.fimg,.rule,#routeMap,.why-card,.mani").forEach(function(el){ io.observe(el); });
 $$(".scr").forEach(function(el){ if(!el.closest(".rv") && !el.closest(".hero-content")) io.observe(el); });
 
-/* ---------- COUNTERS (with 1,200-style formatting) ---------- */
+/* ---------- COUNTERS ---------- */
 var cio=new IntersectionObserver(function(es){
   es.forEach(function(e){
     if(!e.isIntersecting) return;
     var el=e.target, end=+el.getAttribute("data-count"); cio.unobserve(el);
-    if(RM){ el.textContent=end.toLocaleString("en-US"); return; }
+    if(RM){ el.textContent=end; return; }
     var t0=null;
-    function step(ts){
-      if(!t0)t0=ts;
-      var k=Math.min((ts-t0)/1800,1), ease=1-Math.pow(1-k,4);
-      el.textContent=Math.round(end*ease).toLocaleString("en-US");
-      if(k<1) requestAnimationFrame(step);
-    }
+    function step(ts){ if(!t0)t0=ts; var k=Math.min((ts-t0)/1800,1), ease=1-Math.pow(1-k,4);
+      el.textContent=Math.round(end*ease); if(k<1) requestAnimationFrame(step); }
     requestAnimationFrame(step);
   });
 },{threshold:.6});
@@ -1141,42 +1039,34 @@ document.addEventListener("keydown",function(e){
   if(e.key==="ArrowRight") openLb(gi+1);
 });
 
-/* ---------- FAQ ACCORDION ---------- */
-var faqItems=$$(".faq-item");
-function openFaq(item){
-  faqItems.forEach(function(o){
-    o.classList.remove("open");
-    o.querySelector(".faq-a").style.maxHeight=null;
-    o.querySelector(".faq-q").setAttribute("aria-expanded","false");
-  });
-  item.classList.add("open");
-  var ans=item.querySelector(".faq-a");
-  ans.style.maxHeight=ans.scrollHeight+"px";
-  item.querySelector(".faq-q").setAttribute("aria-expanded","true");
+/* ---------- TESTIMONIALS ---------- */
+var slides=$$(".t-slide"), ti=0, ringC=$("#tRingC"), C=100.53, DUR=6000, tStart=performance.now(), paused=false, lastEl=0;
+function showT(i){ ti=(i+slides.length)%slides.length;
+  slides.forEach(function(s,k){ s.classList.toggle("on",k===ti); });
+  tStart=performance.now(); lastEl=0;
 }
-faqItems.forEach(function(item){
-  item.querySelector(".faq-q").addEventListener("click",function(){
-    if(item.classList.contains("open")){
-      item.classList.remove("open");
-      item.querySelector(".faq-a").style.maxHeight=null;
-      this.setAttribute("aria-expanded","false");
-    }else{ openFaq(item); }
-  });
-});
-if(faqItems.length) openFaq(faqItems[0]); /* first question open by default */
-window.addEventListener("resize",function(){
-  var open=$(".faq-item.open");
-  if(open){ var a=open.querySelector(".faq-a"); a.style.maxHeight=a.scrollHeight+"px"; }
-});
+$("#tPrev").addEventListener("click",function(){ showT(ti-1); });
+$("#tNext").addEventListener("click",function(){ showT(ti+1); });
+$("#tStage").addEventListener("mouseenter",function(){ paused=true; });
+$("#tStage").addEventListener("mouseleave",function(){ paused=false; tStart=performance.now()-lastEl; });
+if(!RM){
+  (function tLoop(now){
+    if(!paused){
+      var el=(now-tStart)%DUR;
+      if(el<lastEl) showT(ti+1);
+      lastEl=el;
+      ringC.style.strokeDashoffset=(C*(1-el/DUR)).toFixed(2);
+    }
+    requestAnimationFrame(tLoop);
+  })(performance.now());
+}else{ ringC.style.strokeDashoffset=0; }
 
 /* ---------- FORM / TOAST ---------- */
 var toastEl=$("#toast"), toastTm=null;
 function toastMsg(msg){ toastEl.textContent=msg; toastEl.classList.add("show");
   if(toastTm) clearTimeout(toastTm); toastTm=setTimeout(function(){ toastEl.classList.remove("show"); },4200); }
-$("#bookForm").addEventListener("submit",function(){
-  toastMsg("✦ Request received — we reply within hours, insha'Allah");
-  /* form then continues to its action (mailto / your backend) */
-});
+$("#bookForm").addEventListener("submit",function(e){ e.preventDefault(); e.target.reset();
+  toastMsg("✦ Request received — we reply within hours, insha'Allah"); });
 
 /* ---------- MISC ---------- */
 $("#toTop").addEventListener("click",function(){ window.scrollTo({top:0,behavior:RM?"auto":"smooth"}); });
